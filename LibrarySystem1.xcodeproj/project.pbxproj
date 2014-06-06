@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE803ED119404E0D00049257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED019404E0D00049257 /* Foundation.framework */; };
+		FE803ED319404E0D00049257 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED219404E0D00049257 /* CoreGraphics.framework */; };
+		FE803ED519404E0D00049257 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED419404E0D00049257 /* UIKit.framework */; };
+		FE803EDB19404E0D00049257 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE803ED919404E0D00049257 /* InfoPlist.strings */; };
+		FE803EDD19404E0D00049257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EDC19404E0D00049257 /* main.m */; };
+		FE803EE119404E0D00049257 /* LSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EE019404E0D00049257 /* LSAppDelegate.m */; };
+		FE803EE419404E0D00049257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE803EE219404E0D00049257 /* Main.storyboard */; };
+		FE803EE719404E0D00049257 /* LSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EE619404E0D00049257 /* LSViewController.m */; };
+		FE803EE919404E0D00049257 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE803EE819404E0D00049257 /* Images.xcassets */; };
+		FE803EF019404E0D00049257 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803EEF19404E0D00049257 /* XCTest.framework */; };
+		FE803EF119404E0D00049257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED019404E0D00049257 /* Foundation.framework */; };
+		FE803EF219404E0D00049257 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED419404E0D00049257 /* UIKit.framework */; };
+		FE803EFA19404E0D00049257 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE803EF819404E0D00049257 /* InfoPlist.strings */; };
+		FE803EFC19404E0D00049257 /* LibrarySystem1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EFB19404E0D00049257 /* LibrarySystem1Tests.m */; };
+		FE803F0719404E6000049257 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0619404E6000049257 /* LibraryTableViewController.m */; };
+		FE803F0A19404E7000049257 /* ShelfTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0919404E7000049257 /* ShelfTableViewController.m */; };
+		FE803F0D19404E8B00049257 /* BookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0C19404E8B00049257 /* BookTableViewController.m */; };
+		FE803F28194055A100049257 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F23194055A100049257 /* Book.m */; };
+		FE803F29194055A100049257 /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F25194055A100049257 /* Library.m */; };
+		FE803F2A194055A100049257 /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F27194055A100049257 /* Shelf.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE803EF319404E0D00049257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE803EC519404E0D00049257 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE803ECC19404E0D00049257;
+			remoteInfo = LibrarySystem1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE803ECD19404E0D00049257 /* LibrarySystem1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibrarySystem1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE803ED019404E0D00049257 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE803ED219404E0D00049257 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE803ED419404E0D00049257 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE803ED819404E0D00049257 /* LibrarySystem1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LibrarySystem1-Info.plist"; sourceTree = "<group>"; };
+		FE803EDA19404E0D00049257 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE803EDC19404E0D00049257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE803EDE19404E0D00049257 /* LibrarySystem1-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibrarySystem1-Prefix.pch"; sourceTree = "<group>"; };
+		FE803EDF19404E0D00049257 /* LSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAppDelegate.h; sourceTree = "<group>"; };
+		FE803EE019404E0D00049257 /* LSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAppDelegate.m; sourceTree = "<group>"; };
+		FE803EE319404E0D00049257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE803EE519404E0D00049257 /* LSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSViewController.h; sourceTree = "<group>"; };
+		FE803EE619404E0D00049257 /* LSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSViewController.m; sourceTree = "<group>"; };
+		FE803EE819404E0D00049257 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FE803EEE19404E0D00049257 /* LibrarySystem1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibrarySystem1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE803EEF19404E0D00049257 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FE803EF719404E0D00049257 /* LibrarySystem1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LibrarySystem1Tests-Info.plist"; sourceTree = "<group>"; };
+		FE803EF919404E0D00049257 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE803EFB19404E0D00049257 /* LibrarySystem1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibrarySystem1Tests.m; sourceTree = "<group>"; };
+		FE803F0519404E6000049257 /* LibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryTableViewController.h; sourceTree = "<group>"; };
+		FE803F0619404E6000049257 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
+		FE803F0819404E7000049257 /* ShelfTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelfTableViewController.h; sourceTree = "<group>"; };
+		FE803F0919404E7000049257 /* ShelfTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfTableViewController.m; sourceTree = "<group>"; };
+		FE803F0B19404E8B00049257 /* BookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewController.h; sourceTree = "<group>"; };
+		FE803F0C19404E8B00049257 /* BookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewController.m; sourceTree = "<group>"; };
+		FE803F22194055A100049257 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Model/Book.h; sourceTree = "<group>"; };
+		FE803F23194055A100049257 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
+		FE803F24194055A100049257 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Library.h; path = Model/Library.h; sourceTree = "<group>"; };
+		FE803F25194055A100049257 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Library.m; path = Model/Library.m; sourceTree = "<group>"; };
+		FE803F26194055A100049257 /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shelf.h; path = Model/Shelf.h; sourceTree = "<group>"; };
+		FE803F27194055A100049257 /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shelf.m; path = Model/Shelf.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE803ECA19404E0D00049257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803ED319404E0D00049257 /* CoreGraphics.framework in Frameworks */,
+				FE803ED519404E0D00049257 /* UIKit.framework in Frameworks */,
+				FE803ED119404E0D00049257 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE803EEB19404E0D00049257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803EF019404E0D00049257 /* XCTest.framework in Frameworks */,
+				FE803EF219404E0D00049257 /* UIKit.framework in Frameworks */,
+				FE803EF119404E0D00049257 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE803EC419404E0D00049257 = {
+			isa = PBXGroup;
+			children = (
+				FE803F2B194055AA00049257 /* Models */,
+				FE803ED619404E0D00049257 /* LibrarySystem1 */,
+				FE803EF519404E0D00049257 /* LibrarySystem1Tests */,
+				FE803ECF19404E0D00049257 /* Frameworks */,
+				FE803ECE19404E0D00049257 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE803ECE19404E0D00049257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE803ECD19404E0D00049257 /* LibrarySystem1.app */,
+				FE803EEE19404E0D00049257 /* LibrarySystem1Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE803ECF19404E0D00049257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE803ED019404E0D00049257 /* Foundation.framework */,
+				FE803ED219404E0D00049257 /* CoreGraphics.framework */,
+				FE803ED419404E0D00049257 /* UIKit.framework */,
+				FE803EEF19404E0D00049257 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE803ED619404E0D00049257 /* LibrarySystem1 */ = {
+			isa = PBXGroup;
+			children = (
+				FE803EDF19404E0D00049257 /* LSAppDelegate.h */,
+				FE803EE019404E0D00049257 /* LSAppDelegate.m */,
+				FE803EE219404E0D00049257 /* Main.storyboard */,
+				FE803EE519404E0D00049257 /* LSViewController.h */,
+				FE803EE619404E0D00049257 /* LSViewController.m */,
+				FE803EE819404E0D00049257 /* Images.xcassets */,
+				FE803ED719404E0D00049257 /* Supporting Files */,
+				FE803F0519404E6000049257 /* LibraryTableViewController.h */,
+				FE803F0619404E6000049257 /* LibraryTableViewController.m */,
+				FE803F0819404E7000049257 /* ShelfTableViewController.h */,
+				FE803F0919404E7000049257 /* ShelfTableViewController.m */,
+				FE803F0B19404E8B00049257 /* BookTableViewController.h */,
+				FE803F0C19404E8B00049257 /* BookTableViewController.m */,
+			);
+			path = LibrarySystem1;
+			sourceTree = "<group>";
+		};
+		FE803ED719404E0D00049257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE803ED819404E0D00049257 /* LibrarySystem1-Info.plist */,
+				FE803ED919404E0D00049257 /* InfoPlist.strings */,
+				FE803EDC19404E0D00049257 /* main.m */,
+				FE803EDE19404E0D00049257 /* LibrarySystem1-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE803EF519404E0D00049257 /* LibrarySystem1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FE803EFB19404E0D00049257 /* LibrarySystem1Tests.m */,
+				FE803EF619404E0D00049257 /* Supporting Files */,
+			);
+			path = LibrarySystem1Tests;
+			sourceTree = "<group>";
+		};
+		FE803EF619404E0D00049257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE803EF719404E0D00049257 /* LibrarySystem1Tests-Info.plist */,
+				FE803EF819404E0D00049257 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE803F2B194055AA00049257 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE803F22194055A100049257 /* Book.h */,
+				FE803F23194055A100049257 /* Book.m */,
+				FE803F24194055A100049257 /* Library.h */,
+				FE803F25194055A100049257 /* Library.m */,
+				FE803F26194055A100049257 /* Shelf.h */,
+				FE803F27194055A100049257 /* Shelf.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE803ECC19404E0D00049257 /* LibrarySystem1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE803EFF19404E0D00049257 /* Build configuration list for PBXNativeTarget "LibrarySystem1" */;
+			buildPhases = (
+				FE803EC919404E0D00049257 /* Sources */,
+				FE803ECA19404E0D00049257 /* Frameworks */,
+				FE803ECB19404E0D00049257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibrarySystem1;
+			productName = LibrarySystem1;
+			productReference = FE803ECD19404E0D00049257 /* LibrarySystem1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE803EED19404E0D00049257 /* LibrarySystem1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE803F0219404E0D00049257 /* Build configuration list for PBXNativeTarget "LibrarySystem1Tests" */;
+			buildPhases = (
+				FE803EEA19404E0D00049257 /* Sources */,
+				FE803EEB19404E0D00049257 /* Frameworks */,
+				FE803EEC19404E0D00049257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE803EF419404E0D00049257 /* PBXTargetDependency */,
+			);
+			name = LibrarySystem1Tests;
+			productName = LibrarySystem1Tests;
+			productReference = FE803EEE19404E0D00049257 /* LibrarySystem1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE803EC519404E0D00049257 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = PrasannaProjects;
+				TargetAttributes = {
+					FE803EED19404E0D00049257 = {
+						TestTargetID = FE803ECC19404E0D00049257;
+					};
+				};
+			};
+			buildConfigurationList = FE803EC819404E0D00049257 /* Build configuration list for PBXProject "LibrarySystem1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE803EC419404E0D00049257;
+			productRefGroup = FE803ECE19404E0D00049257 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE803ECC19404E0D00049257 /* LibrarySystem1 */,
+				FE803EED19404E0D00049257 /* LibrarySystem1Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE803ECB19404E0D00049257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803EE919404E0D00049257 /* Images.xcassets in Resources */,
+				FE803EDB19404E0D00049257 /* InfoPlist.strings in Resources */,
+				FE803EE419404E0D00049257 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE803EEC19404E0D00049257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803EFA19404E0D00049257 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE803EC919404E0D00049257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803EDD19404E0D00049257 /* main.m in Sources */,
+				FE803F29194055A100049257 /* Library.m in Sources */,
+				FE803F0A19404E7000049257 /* ShelfTableViewController.m in Sources */,
+				FE803F0D19404E8B00049257 /* BookTableViewController.m in Sources */,
+				FE803EE119404E0D00049257 /* LSAppDelegate.m in Sources */,
+				FE803EE719404E0D00049257 /* LSViewController.m in Sources */,
+				FE803F2A194055A100049257 /* Shelf.m in Sources */,
+				FE803F28194055A100049257 /* Book.m in Sources */,
+				FE803F0719404E6000049257 /* LibraryTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE803EEA19404E0D00049257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE803EFC19404E0D00049257 /* LibrarySystem1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE803EF419404E0D00049257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE803ECC19404E0D00049257 /* LibrarySystem1 */;
+			targetProxy = FE803EF319404E0D00049257 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FE803ED919404E0D00049257 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE803EDA19404E0D00049257 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE803EE219404E0D00049257 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE803EE319404E0D00049257 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE803EF819404E0D00049257 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE803EF919404E0D00049257 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE803EFD19404E0D00049257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE803EFE19404E0D00049257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE803F0019404E0D00049257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibrarySystem1/LibrarySystem1-Prefix.pch";
+				INFOPLIST_FILE = "LibrarySystem1/LibrarySystem1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE803F0119404E0D00049257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibrarySystem1/LibrarySystem1-Prefix.pch";
+				INFOPLIST_FILE = "LibrarySystem1/LibrarySystem1-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FE803F0319404E0D00049257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LibrarySystem1.app/LibrarySystem1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibrarySystem1/LibrarySystem1-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibrarySystem1Tests/LibrarySystem1Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FE803F0419404E0D00049257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LibrarySystem1.app/LibrarySystem1";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibrarySystem1/LibrarySystem1-Prefix.pch";
+				INFOPLIST_FILE = "LibrarySystem1Tests/LibrarySystem1Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE803EC819404E0D00049257 /* Build configuration list for PBXProject "LibrarySystem1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE803EFD19404E0D00049257 /* Debug */,
+				FE803EFE19404E0D00049257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE803EFF19404E0D00049257 /* Build configuration list for PBXNativeTarget "LibrarySystem1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE803F0019404E0D00049257 /* Debug */,
+				FE803F0119404E0D00049257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE803F0219404E0D00049257 /* Build configuration list for PBXNativeTarget "LibrarySystem1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE803F0319404E0D00049257 /* Debug */,
+				FE803F0419404E0D00049257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE803EC519404E0D00049257 /* Project object */;
+}
