@@ -66,14 +66,14 @@
 		FE803F0B19404E8B00049257 /* BookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewController.h; sourceTree = "<group>"; };
 		FE803F0C19404E8B00049257 /* BookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewController.m; sourceTree = "<group>"; };
 		FE803FB519472F7C00049257 /* Librarysystem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Librarysystem.json; sourceTree = "<group>"; };
-		FE803FB71948384F00049257 /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shelf.h; sourceTree = "<group>"; };
-		FE803FB81948384F00049257 /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shelf.m; sourceTree = "<group>"; };
-		FE803FBA1948387F00049257 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
-		FE803FBB1948387F00049257 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
-		FE803FBC1948387F00049257 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
-		FE803FBD1948387F00049257 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
-		FE803FBE1948387F00049257 /* LibrarySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarySystem.h; sourceTree = "<group>"; };
-		FE803FBF1948387F00049257 /* LibrarySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySystem.m; sourceTree = "<group>"; };
+		FE803FB71948384F00049257 /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shelf.h; path = ../Shelf.h; sourceTree = "<group>"; };
+		FE803FB81948384F00049257 /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shelf.m; path = ../Shelf.m; sourceTree = "<group>"; };
+		FE803FBA1948387F00049257 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = ../Book.h; sourceTree = "<group>"; };
+		FE803FBB1948387F00049257 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = ../Book.m; sourceTree = "<group>"; };
+		FE803FBC1948387F00049257 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Library.h; path = ../Library.h; sourceTree = "<group>"; };
+		FE803FBD1948387F00049257 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Library.m; path = ../Library.m; sourceTree = "<group>"; };
+		FE803FBE1948387F00049257 /* LibrarySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibrarySystem.h; path = ../LibrarySystem.h; sourceTree = "<group>"; };
+		FE803FBF1948387F00049257 /* LibrarySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibrarySystem.m; path = ../LibrarySystem.m; sourceTree = "<group>"; };
 		FE803FC3194AC17600049257 /* BookDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsViewController.h; path = ../BookDetailsViewController.h; sourceTree = "<group>"; };
 		FE803FC4194AC17600049257 /* BookDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailsViewController.m; path = ../BookDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +105,6 @@
 		FE803EC419404E0D00049257 = {
 			isa = PBXGroup;
 			children = (
-				FE803F2B194055AA00049257 /* Models */,
 				FE803ED619404E0D00049257 /* LibrarySystem1 */,
 				FE803EF519404E0D00049257 /* LibrarySystem1Tests */,
 				FE803ECF19404E0D00049257 /* Frameworks */,
@@ -157,6 +156,14 @@
 		FE803ED719404E0D00049257 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE803FBA1948387F00049257 /* Book.h */,
+				FE803FBB1948387F00049257 /* Book.m */,
+				FE803FBC1948387F00049257 /* Library.h */,
+				FE803FBD1948387F00049257 /* Library.m */,
+				FE803FBE1948387F00049257 /* LibrarySystem.h */,
+				FE803FBF1948387F00049257 /* LibrarySystem.m */,
+				FE803FB71948384F00049257 /* Shelf.h */,
+				FE803FB81948384F00049257 /* Shelf.m */,
 				FE803ED819404E0D00049257 /* LibrarySystem1-Info.plist */,
 				FE803ED919404E0D00049257 /* InfoPlist.strings */,
 				FE803EDC19404E0D00049257 /* main.m */,
@@ -181,21 +188,6 @@
 				FE803EF819404E0D00049257 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FE803F2B194055AA00049257 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FE803FBA1948387F00049257 /* Book.h */,
-				FE803FBB1948387F00049257 /* Book.m */,
-				FE803FBC1948387F00049257 /* Library.h */,
-				FE803FBD1948387F00049257 /* Library.m */,
-				FE803FBE1948387F00049257 /* LibrarySystem.h */,
-				FE803FBF1948387F00049257 /* LibrarySystem.m */,
-				FE803FB71948384F00049257 /* Shelf.h */,
-				FE803FB81948384F00049257 /* Shelf.m */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
