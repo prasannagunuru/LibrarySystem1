@@ -11,10 +11,8 @@
 @interface ShelfTableViewController : UITableViewController
 
 
-@property (nonatomic,strong) NSMutableArray * myShelvesList;
+@property (nonatomic,strong) NSArray * myShelvesList;
 
-@property (strong,nonatomic) NSString * libraryShelves;
 
-@property int libraryShelvesNumber;
 
 @end

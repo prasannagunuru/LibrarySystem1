@@ -10,6 +10,6 @@
 
 @interface BookTableViewController : UITableViewController
 
-@property (nonatomic,strong) NSMutableArray * myBooksList;
+@property (nonatomic,strong) NSArray * myBooksList;
 
 @end

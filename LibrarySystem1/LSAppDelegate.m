@@ -8,14 +8,30 @@
 
 #import "LSAppDelegate.h"
 
+
 @implementation LSAppDelegate
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    BOOL firstlaunch = [[NSUserDefaults standardUserDefaults]boolForKey:@"firstLaunchKey"];
+    if(!firstlaunch)
+    {
+        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+        path = [path stringByAppendingFormat:@"/LibrarySystemData.json"];
+        NSString *filePath = [[NSBundle mainBundle]pathForResource:@"Librarysystem" ofType:@"json"];
+        NSData *data = [[NSData alloc]initWithContentsOfFile:filePath];
+        //NSDictionary*result = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        [data writeToFile:path atomically:YES];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"firstLaunchKey"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        //NSLog(@"%@",result);
+    }
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface LibraryTableViewController : UITableViewController
 
-@property (nonatomic,strong) NSMutableArray * myLibrariesList;
+@property (nonatomic,strong) NSArray * myLibrariesList;
+
+-(void) retrieveData;
+
 
 @end

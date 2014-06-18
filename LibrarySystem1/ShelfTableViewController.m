@@ -7,14 +7,15 @@
 //
 
 #import "ShelfTableViewController.h"
-
+#import "Shelf.h"
+#import "Library.h"
+#import "BookTableViewController.h"
+#import "LibrarySystem.h"
 @interface ShelfTableViewController ()
 
 @end
 
 @implementation ShelfTableViewController
-
-@synthesize libraryShelves,libraryShelvesNumber;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,29 +36,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.myShelvesList =[[NSMutableArray alloc] initWithObjects:@"Shelf1",@"Shelf2",@"Shelf3",@"Shelf4",nil];
+    self.title = @"Shelves List";
     
-    self.title = libraryShelves;
-    
-    switch (libraryShelvesNumber) {
-        case 0:
-            self.myShelvesList =[[NSMutableArray alloc] initWithObjects:@"Shelf2",@"Shelf3",@"Shelf4",nil];
-            break;
-        case 1:
-            self.myShelvesList =[[NSMutableArray alloc] initWithObjects:@"Shelf1",@"Shelf3",@"Shelf4",nil];
-            break;
-        case 2:
-            self.myShelvesList =[[NSMutableArray alloc] initWithObjects:@"Shelf2",@"Shelf1",@"Shelf4",nil];
-            break;
-        case 3:
-            self.myShelvesList =[[NSMutableArray alloc] initWithObjects:@"Shelf2",@"Shelf3",@"Shelf1",nil];
-            break;
-            
-            
-        default:
-            break;
-    }
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +59,9 @@
 {
 
     // Return the number of rows in the section.
-    return [self.myShelvesList count];
+    
+    NSUInteger count = self.myShelvesList.count;
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -92,8 +74,10 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+   
+    Shelf * shelfObject = (Shelf *)[self.myShelvesList objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [self.myShelvesList objectAtIndex:indexPath.row];
+    cell.textLabel.text =shelfObject.name;
     
     return cell;
 }
@@ -136,7 +120,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -144,7 +128,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)sender];
+    [LibrarySystem instanceFromDictionary].shelfIndex = indexPath.row;
+    BookTableViewController *shelfView = (BookTableViewController*)segue.destinationViewController;
+    Shelf * shelfObject = [self.myShelvesList objectAtIndex:indexPath.row];
+    NSArray* books = shelfObject.books;
+    shelfView.myBooksList = books;
+    
 }
-*/
 
 @end

@@ -10,11 +10,19 @@
 
 #import "ShelfTableViewController.h"
 
+#import "LibrarySystem.h"
+
+#import "Library.h"
+
 @interface LibraryTableViewController ()
+
+@property (nonatomic,strong) NSMutableArray *libraryList ;
 
 @end
 
 @implementation LibraryTableViewController
+
+@synthesize libraryList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,10 +43,13 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.myLibrariesList =[[NSMutableArray alloc] initWithObjects:@"library1",@"library2",@"library3",@"library4",nil];
+    //self.myLibrariesList =[[NSMutableArray alloc] initWithObjects:@"library1",@"library2",@"library3",@"library4",nil];
     
-    self.title = @"Library List";
+    self.title = @"Libraries List";
+    [self retrieveData];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -73,15 +84,21 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [self.myLibrariesList objectAtIndex:indexPath.row];
     
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    Library *libraryObject = (Library*)[self.myLibrariesList objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = libraryObject.name;
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     
     // Configure the cell...
     
     return cell;
 }
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}*/
 
 
 /*
@@ -122,7 +139,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -130,25 +147,29 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)sender];
+    [LibrarySystem instanceFromDictionary].libraryIndex =indexPath.row;
+    ShelfTableViewController *shelfView = (ShelfTableViewController*)segue.destinationViewController;
+    Library * libraryObject = [self.myLibrariesList objectAtIndex:indexPath.row];
+    NSArray * shelves = libraryObject.shelf;
+    shelfView.myShelvesList = shelves;
 }
-*/
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+
+-(void) retrieveData
 {
+    /*NSString *filePath = [[NSBundle mainBundle]pathForResource:@"Librarysystem" ofType:@"json"];
     
-    ShelfTableViewController *shelvesTVC = [[ShelfTableViewController alloc]init];
+    NSData *data = [[NSData alloc]initWithContentsOfFile:filePath];
     
-    shelvesTVC = [segue destinationViewController];
+    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];*/
     
-    NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
+    LibrarySystem *libraries = [LibrarySystem instanceFromDictionary];
     
-    shelvesTVC.libraryShelves = [self.myLibrariesList objectAtIndex:indexPath.row];
-    
-    shelvesTVC.libraryShelvesNumber = indexPath.row;
-    
-    
-    
-    
+    self.myLibrariesList = libraries.libraries;
+
+    [self.tableView reloadData];
     
 }
 

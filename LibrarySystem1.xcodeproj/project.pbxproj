@@ -14,7 +14,6 @@
 		FE803EDD19404E0D00049257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EDC19404E0D00049257 /* main.m */; };
 		FE803EE119404E0D00049257 /* LSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EE019404E0D00049257 /* LSAppDelegate.m */; };
 		FE803EE419404E0D00049257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE803EE219404E0D00049257 /* Main.storyboard */; };
-		FE803EE719404E0D00049257 /* LSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803EE619404E0D00049257 /* LSViewController.m */; };
 		FE803EE919404E0D00049257 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE803EE819404E0D00049257 /* Images.xcassets */; };
 		FE803EF019404E0D00049257 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803EEF19404E0D00049257 /* XCTest.framework */; };
 		FE803EF119404E0D00049257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE803ED019404E0D00049257 /* Foundation.framework */; };
@@ -24,9 +23,12 @@
 		FE803F0719404E6000049257 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0619404E6000049257 /* LibraryTableViewController.m */; };
 		FE803F0A19404E7000049257 /* ShelfTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0919404E7000049257 /* ShelfTableViewController.m */; };
 		FE803F0D19404E8B00049257 /* BookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F0C19404E8B00049257 /* BookTableViewController.m */; };
-		FE803F28194055A100049257 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F23194055A100049257 /* Book.m */; };
-		FE803F29194055A100049257 /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F25194055A100049257 /* Library.m */; };
-		FE803F2A194055A100049257 /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803F27194055A100049257 /* Shelf.m */; };
+		FE803FB619472F7C00049257 /* Librarysystem.json in Resources */ = {isa = PBXBuildFile; fileRef = FE803FB519472F7C00049257 /* Librarysystem.json */; };
+		FE803FB91948384F00049257 /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803FB81948384F00049257 /* Shelf.m */; };
+		FE803FC01948387F00049257 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803FBB1948387F00049257 /* Book.m */; };
+		FE803FC11948387F00049257 /* Library.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803FBD1948387F00049257 /* Library.m */; };
+		FE803FC21948387F00049257 /* LibrarySystem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803FBF1948387F00049257 /* LibrarySystem.m */; };
+		FE803FC5194AC17600049257 /* BookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE803FC4194AC17600049257 /* BookDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,6 @@
 		FE803EDF19404E0D00049257 /* LSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAppDelegate.h; sourceTree = "<group>"; };
 		FE803EE019404E0D00049257 /* LSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAppDelegate.m; sourceTree = "<group>"; };
 		FE803EE319404E0D00049257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE803EE519404E0D00049257 /* LSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSViewController.h; sourceTree = "<group>"; };
-		FE803EE619404E0D00049257 /* LSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSViewController.m; sourceTree = "<group>"; };
 		FE803EE819404E0D00049257 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE803EEE19404E0D00049257 /* LibrarySystem1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibrarySystem1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE803EEF19404E0D00049257 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,12 +65,17 @@
 		FE803F0919404E7000049257 /* ShelfTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShelfTableViewController.m; sourceTree = "<group>"; };
 		FE803F0B19404E8B00049257 /* BookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewController.h; sourceTree = "<group>"; };
 		FE803F0C19404E8B00049257 /* BookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewController.m; sourceTree = "<group>"; };
-		FE803F22194055A100049257 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Model/Book.h; sourceTree = "<group>"; };
-		FE803F23194055A100049257 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Model/Book.m; sourceTree = "<group>"; };
-		FE803F24194055A100049257 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Library.h; path = Model/Library.h; sourceTree = "<group>"; };
-		FE803F25194055A100049257 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Library.m; path = Model/Library.m; sourceTree = "<group>"; };
-		FE803F26194055A100049257 /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shelf.h; path = Model/Shelf.h; sourceTree = "<group>"; };
-		FE803F27194055A100049257 /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shelf.m; path = Model/Shelf.m; sourceTree = "<group>"; };
+		FE803FB519472F7C00049257 /* Librarysystem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Librarysystem.json; sourceTree = "<group>"; };
+		FE803FB71948384F00049257 /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shelf.h; sourceTree = "<group>"; };
+		FE803FB81948384F00049257 /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shelf.m; sourceTree = "<group>"; };
+		FE803FBA1948387F00049257 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		FE803FBB1948387F00049257 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		FE803FBC1948387F00049257 /* Library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Library.h; sourceTree = "<group>"; };
+		FE803FBD1948387F00049257 /* Library.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Library.m; sourceTree = "<group>"; };
+		FE803FBE1948387F00049257 /* LibrarySystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrarySystem.h; sourceTree = "<group>"; };
+		FE803FBF1948387F00049257 /* LibrarySystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrarySystem.m; sourceTree = "<group>"; };
+		FE803FC3194AC17600049257 /* BookDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookDetailsViewController.h; path = ../BookDetailsViewController.h; sourceTree = "<group>"; };
+		FE803FC4194AC17600049257 /* BookDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookDetailsViewController.m; path = ../BookDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +136,10 @@
 		FE803ED619404E0D00049257 /* LibrarySystem1 */ = {
 			isa = PBXGroup;
 			children = (
+				FE803FB519472F7C00049257 /* Librarysystem.json */,
 				FE803EDF19404E0D00049257 /* LSAppDelegate.h */,
 				FE803EE019404E0D00049257 /* LSAppDelegate.m */,
 				FE803EE219404E0D00049257 /* Main.storyboard */,
-				FE803EE519404E0D00049257 /* LSViewController.h */,
-				FE803EE619404E0D00049257 /* LSViewController.m */,
 				FE803EE819404E0D00049257 /* Images.xcassets */,
 				FE803ED719404E0D00049257 /* Supporting Files */,
 				FE803F0519404E6000049257 /* LibraryTableViewController.h */,
@@ -144,6 +148,8 @@
 				FE803F0919404E7000049257 /* ShelfTableViewController.m */,
 				FE803F0B19404E8B00049257 /* BookTableViewController.h */,
 				FE803F0C19404E8B00049257 /* BookTableViewController.m */,
+				FE803FC3194AC17600049257 /* BookDetailsViewController.h */,
+				FE803FC4194AC17600049257 /* BookDetailsViewController.m */,
 			);
 			path = LibrarySystem1;
 			sourceTree = "<group>";
@@ -180,12 +186,14 @@
 		FE803F2B194055AA00049257 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE803F22194055A100049257 /* Book.h */,
-				FE803F23194055A100049257 /* Book.m */,
-				FE803F24194055A100049257 /* Library.h */,
-				FE803F25194055A100049257 /* Library.m */,
-				FE803F26194055A100049257 /* Shelf.h */,
-				FE803F27194055A100049257 /* Shelf.m */,
+				FE803FBA1948387F00049257 /* Book.h */,
+				FE803FBB1948387F00049257 /* Book.m */,
+				FE803FBC1948387F00049257 /* Library.h */,
+				FE803FBD1948387F00049257 /* Library.m */,
+				FE803FBE1948387F00049257 /* LibrarySystem.h */,
+				FE803FBF1948387F00049257 /* LibrarySystem.m */,
+				FE803FB71948384F00049257 /* Shelf.h */,
+				FE803FB81948384F00049257 /* Shelf.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE803EE919404E0D00049257 /* Images.xcassets in Resources */,
+				FE803FB619472F7C00049257 /* Librarysystem.json in Resources */,
 				FE803EDB19404E0D00049257 /* InfoPlist.strings in Resources */,
 				FE803EE419404E0D00049257 /* Main.storyboard in Resources */,
 			);
@@ -289,13 +298,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE803EDD19404E0D00049257 /* main.m in Sources */,
-				FE803F29194055A100049257 /* Library.m in Sources */,
 				FE803F0A19404E7000049257 /* ShelfTableViewController.m in Sources */,
 				FE803F0D19404E8B00049257 /* BookTableViewController.m in Sources */,
+				FE803FC01948387F00049257 /* Book.m in Sources */,
 				FE803EE119404E0D00049257 /* LSAppDelegate.m in Sources */,
-				FE803EE719404E0D00049257 /* LSViewController.m in Sources */,
-				FE803F2A194055A100049257 /* Shelf.m in Sources */,
-				FE803F28194055A100049257 /* Book.m in Sources */,
+				FE803FC21948387F00049257 /* LibrarySystem.m in Sources */,
+				FE803FC5194AC17600049257 /* BookDetailsViewController.m in Sources */,
+				FE803FB91948384F00049257 /* Shelf.m in Sources */,
+				FE803FC11948387F00049257 /* Library.m in Sources */,
 				FE803F0719404E6000049257 /* LibraryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +511,7 @@
 				FE803F0119404E0D00049257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE803F0219404E0D00049257 /* Build configuration list for PBXNativeTarget "LibrarySystem1Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +520,7 @@
 				FE803F0419404E0D00049257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,15 @@
 //
 
 #import "BookTableViewController.h"
+#import "Book.h"
+#import "BookDetailsViewController.h"
+#import "LibrarySystem.h"
+
+
 
 @interface BookTableViewController ()
+
+
 
 @end
 
@@ -33,9 +40,62 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.myBooksList =[[NSMutableArray alloc] initWithObjects:@"Book1",@"Book2",@"Book3",@"Book4",nil];
-
+    self.title = @"Books List";
+    
 }
+- (IBAction)deleteAction:(id)sender
+{
+    UIButton* senderBtn = (UIButton*)sender;
+    
+    CGPoint buttonRect = [self.view convertPoint:CGPointZero fromView:senderBtn];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonRect];
+    [LibrarySystem instanceFromDictionary].bookIndex = indexPath.row;
+    
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    path = [path stringByAppendingPathComponent:@"/LibrarySystemData.json"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path])
+    {
+        NSData *data = [[NSData alloc]initWithContentsOfFile:path];
+        NSMutableDictionary*jsonData = [NSMutableDictionary dictionaryWithDictionary:[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL]];
+        NSMutableArray *libraryArray = [NSMutableArray arrayWithArray:[jsonData objectForKey:@"librarySystem"]];
+        NSDictionary *libraryDictionary =[NSMutableDictionary dictionaryWithDictionary:libraryArray[[LibrarySystem instanceFromDictionary].libraryIndex]];
+        NSMutableArray *shelfArray = [NSMutableArray arrayWithArray:[libraryDictionary objectForKey:@"shelf"]];
+        NSDictionary *shelfDictionary = [NSMutableDictionary dictionaryWithDictionary:shelfArray[[LibrarySystem instanceFromDictionary].shelfIndex]];
+        NSMutableArray *bookArray = [NSMutableArray arrayWithArray:[shelfDictionary objectForKey:@"books"]];
+        
+        [bookArray removeObject:bookArray[[LibrarySystem instanceFromDictionary].bookIndex]];
+
+        [shelfDictionary setValue:bookArray forKey:@"books"];
+        shelfArray[[LibrarySystem instanceFromDictionary].shelfIndex] = shelfDictionary;
+        [libraryDictionary setValue:shelfArray forKey:@"shelf"];
+        libraryArray[[LibrarySystem instanceFromDictionary].libraryIndex] = libraryDictionary;
+        [jsonData setValue:libraryArray forKey:@"librarySystem"];
+        data = [NSJSONSerialization dataWithJSONObject:jsonData options:NSJSONWritingPrettyPrinted error:NULL];
+        [data writeToFile:path atomically:YES];
+
+    }
+    
+    [self viewWillAppear:YES];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    NSDictionary* result = [[LibrarySystem instanceFromDictionary] retriveDataFromJson];
+    
+    LibrarySystem* newSysytem =  [LibrarySystem new];
+    [newSysytem setAttributesFromDictionary:result];
+    
+    Library* library = newSysytem.libraries[[LibrarySystem instanceFromDictionary].libraryIndex];
+    Shelf* shelfObject = library.shelf[[LibrarySystem instanceFromDictionary].shelfIndex];
+
+    self.myBooksList = shelfObject.books;
+    [self.tableView reloadData];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -68,8 +128,9 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+        Book * bookobject = [self.myBooksList objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [self.myBooksList objectAtIndex:indexPath.row];
+    cell.textLabel.text =bookobject.name;
     
     return cell;
 }
@@ -103,16 +164,16 @@
 }
 */
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
-/*
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -120,7 +181,34 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    BookDetailsViewController * bookDetailObject = (BookDetailsViewController *)segue.destinationViewController;
+    UIButton* senderBtn = (UIButton*)sender;
+    
+    CGPoint buttonRect = [self.view convertPoint:CGPointZero fromView:senderBtn];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonRect];
+    [LibrarySystem instanceFromDictionary].bookIndex = indexPath.row;
+    bookDetailObject.bookDetails = [self.myBooksList objectAtIndex:indexPath.row];
+    if([segue.identifier isEqualToString:@"createIdentifire"])
+        bookDetailObject.mode = create;
+    
+    else if ([segue.identifier isEqualToString:@"readIdentifire"])
+        bookDetailObject.mode = readBook;
+    
+    else if ([segue.identifier isEqualToString:@"updateIdentifire"])
+        bookDetailObject.mode = update;  
 }
-*/
 
+
+
+/*- (IBAction)createBook:(id)sender {
+    
+    //if([book isKindOfClass:[Book class]])
+    //{
+        BookDetailsViewController *bookDetailObject = [BookDetailsViewController new];
+    
+        [self.navigationController pushViewController:bookDetailObject animated:YES];
+        
+    //}
+    
+}*/
 @end

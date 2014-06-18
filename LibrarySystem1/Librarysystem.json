@@ -1,0 +1,76 @@
+{
+  "librarySystem": [
+    {
+      "name": "library1",
+      "id": 1,
+      "shelf": [
+        {
+          "name": "shelf11",
+          "id": 11,
+          "books": [
+            {
+              "name": "book111",
+              "id": 111,
+              "author":"A"
+            },
+            {
+              "name": "book112",
+              "id": 112,
+              "author":"B"
+            }
+          ]
+        },
+        {
+           "name": "shelf12",
+          "id": 11,
+          "books": [
+            {
+              "name": "book121",
+              "id": 121,
+              "author":"G"
+            },
+            {
+              "name": "book122",
+              "id": 122,
+              "author":"C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "library2",
+      "id": 2,
+      "shelf": [
+        {
+          "name": "shelf21",
+          "id": 21,
+          "books": [
+            {
+              "name": "book211",
+              "id": 211,
+              "author":"A"
+            },
+            {
+              "name": "book212",
+              "id": 212,
+              "author":"B"
+            }
+          ]
+        },
+        {
+           "name": "shelf22",
+          "id": 11,
+          "books": [
+            {
+              "name": "book221",
+              "id": 221,
+              "author":"G"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+				
